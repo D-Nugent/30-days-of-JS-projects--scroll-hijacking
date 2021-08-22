@@ -1,0 +1,148 @@
+/* HTML Reset */
+
+html {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: whitesmoke;
+  height: 100%;
+}
+
+*,*::before,*::after{
+  box-sizing: inherit;
+}
+
+/* Top-level Styling */
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  color: teal;
+  background-color: whitesmoke;
+  z-index: 1;
+}
+
+main {
+  height: 100%;
+}
+
+/* Main Body Styling */
+
+.landing{
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5%;
+}
+
+.secondary-heading{
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.landing svg {
+  height: 25%;
+  animation: iconHover 1.2s ease-in-out infinite;
+  ;
+}
+
+@keyframes iconHover {
+  0% {transform: translateY(0);}
+  50% {transform: translateY(8px);}
+  100% {transform: translateY(0);}
+}
+
+.facts{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  width: 60%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.tertiary-heading{
+  font-size: 2rem;
+}
+
+.fact{
+  width: 40%;
+  background-color: teal;
+  padding: 2% 4%;
+  margin: 10% 0;
+  border-radius: 8px;
+  color: whitesmoke;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, .5);
+  transition: all .5s ease-in-out;
+}
+
+.fact.--left{
+  align-self: flex-start;
+  transform: translateX(-120%) scale(1);
+}
+  
+.fact.--right{
+  align-self: flex-end;
+  transform: translateX(120%) scale(.8);
+}
+
+.fact.--active{
+  transform: translateX(0) scale(.8);
+}
+
+.sign-off{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.quarternary-heading{
+  font-size: 3rem;
+  color: teal;
+  margin: 0;
+}
+
+/* Footer Styling */
+
+footer {
+  width: 100%;
+  /* height: 50%; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* svg{
+  position: absolute;
+} */
+
+.rubbish-item{
+  opacity: 0;
+  transform: translateY(-25%);
+  /* transition: opacity .3s ease-in-out, transform .3s ease-out 2s; */
+  transition: all .3s ease-in-out;
+}
+
+.rubbish-item.--active{
+  opacity: 1;
+  transform: translateY(0);
+}
